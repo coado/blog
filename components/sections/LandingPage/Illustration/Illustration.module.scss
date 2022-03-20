@@ -1,0 +1,22 @@
+
+.illustration {
+    width: 50%;
+
+    svg {
+        //stroke-dasharray: 100;
+        //stroke-dashoffset: 10px;
+        //stroke-linecap: round;
+       animation: test .15s infinite;
+    }    
+}
+
+
+@keyframes test {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(.3rem);
+    }
+}

@@ -1,0 +1,11 @@
+
+.landingPage {
+    width: 100%;
+    min-height: 100vh;    
+    background-image: url('../../../svg/bg_pattern.svg') !important;
+
+    &__mainContent {
+        display: flex;
+        // margin-top: 5%;
+    }
+}

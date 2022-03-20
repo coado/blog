@@ -1,0 +1,11 @@
+@use './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: var(--base-color-1);
+}
+
+html {
+    font-size: 62.5%; // 1rem => 10px
+}
