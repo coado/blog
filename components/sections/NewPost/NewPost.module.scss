@@ -1,0 +1,16 @@
+
+.newPost {
+    height: 100vh;
+
+
+  &__mainContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+
+      h2 {
+          font-size: clamp(2rem, 3vw, 4.5rem);
+      }
+  }
+}

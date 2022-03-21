@@ -5,12 +5,12 @@ import { Illustration } from './Illustration/Illustration';
 
 export const LandingPage = () => {
     return (
-        <div className={styles.landingPage}>
+        <section className={styles.landingPage}>
             <Navbar />
             <div className={styles.landingPage__mainContent}>
                 <Hero />
                 <Illustration />
             </div>
-        </div>
+        </section>
     )
 }

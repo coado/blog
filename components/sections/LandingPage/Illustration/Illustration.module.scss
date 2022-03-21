@@ -1,22 +1,28 @@
 
 .illustration {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    
+    &__eth {
+        animation: move 6.5s ease-in-out infinite;
+    }
 
-    svg {
-        //stroke-dasharray: 100;
-        //stroke-dashoffset: 10px;
-        //stroke-linecap: round;
-       animation: test .15s infinite;
-    }    
 }
 
 
-@keyframes test {
+@keyframes move {
     0% {
         transform: translateY(0);
     }
 
+    50% {
+        transform: translateY(2rem);
+    }
+
     100% {
-        transform: translateY(.3rem);
+        transform: translateY(0);
     }
 }

@@ -20,8 +20,9 @@
     }
 
     h6 {
-        margin-top: 15%;
+        margin-top: 25%;
         font-size: 4rem;
+        font-size: clamp(1rem, 3vw, 4rem);
         letter-spacing: .5rem;
         
         a {

@@ -1,12 +1,12 @@
 import styles from './Illustration.module.scss';
-import Eth from "../../../../public/images/Eth.svg";
+import Elipse from "../../../../public/svg/elipse.svg";
+import Eth from '../../../../public/svg/eth.svg';
 
 export const Illustration = () => {
     return (
         <div className={styles.illustration}>
-            {/* <img src='../../images/eth.svg'/> */}
-            <Eth />
-            <Eth className={styles.eth2} />
+            <Eth className={styles.illustration__eth} />
+            <Elipse/>
         </div>
     )
 }
