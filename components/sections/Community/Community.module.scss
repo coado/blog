@@ -1,0 +1,45 @@
+@use '../../../styles/mixins';
+
+
+.community {
+    @include mixins.section;
+
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        h2 {
+            @include mixins.header2(10%);
+        }
+
+        p {
+            font-size: 2.5rem;
+            width: 70rem;
+        }
+    }
+
+
+    &__discord {
+        width: 35rem;
+        height: 8rem;
+        background-color: var(--base-color-2);
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-size: 3.5rem;
+            font-weight: 600;
+            padding-right: 10%;
+        }
+
+        svg {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}

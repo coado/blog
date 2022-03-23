@@ -1,0 +1,54 @@
+@use '../../../styles/mixins';
+
+.about {
+    @include mixins.section;
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //width: 50%;
+
+        svg {
+            stroke-dasharray:6;
+            animation: blinking linear infinite 5s;
+
+            &:hover {
+                stroke-dasharray:0;
+            }
+            
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       // width: 50%;
+        //text-align: center;
+        //margin-left: 10rem;
+        //margin-bottom: 10rem;
+
+
+        h2 {
+            @include mixins.header2(10%);
+        }
+
+        p {
+            font-size: 2.5rem;
+            width: 70rem;
+        }
+    }
+}
+
+@keyframes blinking {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    
+    
+
+    100% {
+        stroke-dashoffset: 400;
+    }
+}
