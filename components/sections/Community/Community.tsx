@@ -3,7 +3,7 @@ import Discord from '../../../public/svg/discord.svg';
 
 export const Community = () => {
     return (
-        <section className={styles.community}>
+        <section id='community' className={styles.community}>
             <div className={styles.community__text}>
                 <h2>Community</h2>
                 <p>

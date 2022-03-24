@@ -2,7 +2,7 @@ import styles from './Newsletter.module.scss';
 
 export const Newsletter = () => {
     return (
-        <section className={styles.newsletter}>
+        <section id='newsletter' className={styles.newsletter}>
             <div className={styles.newsletter__text}>
                 <h2>Newsletter</h2>
                 <p>

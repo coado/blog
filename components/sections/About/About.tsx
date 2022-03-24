@@ -3,7 +3,7 @@ import Nerd from '../../../public/svg/nerd.svg';
 
 export const About = () => {
     return (
-        <section className={styles.about}>
+        <section id='about' className={styles.about}>
             <div className={styles.about__icon}>
                 <Nerd />
             </div>

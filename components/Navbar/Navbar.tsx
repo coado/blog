@@ -5,9 +5,9 @@ export const Navbar = () => {
         <div className={styles.navbar}>
             <div className={styles.navbar__items}>
                 <ul>
-                    <li>About</li>
-                    <li>Community</li>
-                    <li>Newsletter</li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#community'>Community</a></li>
+                    <li><a href='#newsletter'>Newsletter</a></li>
                 </ul>
             </div>
         </div>

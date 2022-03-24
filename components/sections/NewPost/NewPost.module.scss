@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
 
   &__mainContent {
@@ -25,4 +26,10 @@
       stroke-dasharray: 2;
       stroke-dashoffset: 10;
   }
+}
+
+.line {
+    position: absolute;
+    transform: translateY(99rem);
+    z-index: -1;
 }
