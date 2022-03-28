@@ -1,54 +1,68 @@
-@use '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
 
 
 .community {
-    @include mixins.section;
+    @include section;
+}
+
+.text {
+    @include text;
+}
 
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+.discord {
+    width: 35rem;
+    height: 8rem;
+    // background-color: var(--base-color-2-dark);
+    border: 2px solid var(--base-color-2);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .2s;
 
-
-        h2 {
-            @include mixins.header2(10%);
-        }
-
-        p {
-            font-size: 2.5rem;
-            width: 70rem;
-        }
+    &:hover {
+        background-color: var(--base-color-2-dark);
+        border: 2px solid var(--base-color-2-dark);
     }
 
+    p {
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+        // font-weight: 600;
+        padding-right: 10%;
+    }
 
-    &__discord {
-        width: 35rem;
-        height: 8rem;
-        // background-color: var(--base-color-2-dark);
-        border: 2px solid var(--base-color-2);
-        border-radius: .5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all .2s;
+    svg {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
 
-        &:hover {
-            background-color: var(--base-color-2-dark);
-            border: 2px solid var(--base-color-2-dark);
-        }
+    @include responsive("md") {
+        width: 30rem;
+        height: 6rem;
 
         p {
-            font-size: 3rem;
-            letter-spacing: 0.3rem;
-            // font-weight: 600;
-            padding-right: 10%;
+            font-size: 2rem;
         }
 
         svg {
-            width: 4.5rem;
-            height: 4.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+
+    @include responsive("xs") {
+        width: 25rem;
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        svg {
+            width: 3rem;
+            height: 3rem;
         }
     }
 }

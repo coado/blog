@@ -4,7 +4,7 @@ import Discord from '../../../public/svg/discord.svg';
 export const Community = () => {
     return (
         <section id='community' className={styles.community}>
-            <div className={styles.community__text}>
+            <div className={styles.text}>
                 <h2>Community</h2>
                 <p>
                     Join our discord server to find with us new exiting crypto projects,
@@ -13,7 +13,7 @@ export const Community = () => {
                 </p>
             </div>
             <div>
-                <div className={styles.community__discord}>
+                <div className={styles.discord}>
                     <p>Join now!</p>
                     <Discord />
                 </div>

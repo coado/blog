@@ -5,13 +5,13 @@ import SmartContract from '../../../../public/svg/smart_contract.svg';
 export const Post = () => {
     return (
         <div className={styles.post}>
-            <div className={styles.post__header}>
-                <h3>Deep dive into smart contract hacks</h3>
-                <div className={styles.post__types}>
+            <div>
+                <h3 className={styles.header} >Deep dive into smart contract hacks</h3>
+                <div className={styles.types}>
                  <Skull /> Hacks | <SmartContract /> Smart Contract
                 </div>    
             </div>
-            <h4 className={styles.post__readMore}> Read more &#10141; </h4>
+            <h4 className={styles.readMore}> Read more &#10141; </h4>
         </div>
     )
 }

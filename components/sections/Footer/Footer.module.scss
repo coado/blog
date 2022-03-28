@@ -1,4 +1,4 @@
-
+@use '../../../styles/mixins' as *;
 
 .footer {
     width: 100%;
@@ -14,9 +14,18 @@
         letter-spacing: .2rem;
     }
 
-    &__icons {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    @include responsive("lg") {
+        height: 10rem;
+        margin-top: 20rem;
+
+        p {
+            font-size: 1rem;
+        }
     }
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

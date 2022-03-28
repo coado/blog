@@ -1,35 +1,38 @@
-@use '../../../styles/mixins';
+@use '../../../styles/mixins' as *;
 
 .newPost {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include section;
     position: relative;
-
-
-  &__mainContent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;  
-      justify-content: center;
-      height: 100%;
-
-      h2 {
-          @include mixins.header2(25%);
-      }
-  }
-
-  &__ball {
-      margin-left: 20rem;
-      stroke-dasharray: 2;
-      stroke-dashoffset: 10;
-  }
 }
 
-.line {
-    position: absolute;
-    transform: translateY(99rem);
-    z-index: -1;
+.ball {
+    margin-left: 20rem;
+
+
+    @include responsive("lg") {
+        position: absolute;
+        z-index: -1;
+        margin: 0 auto;
+        //transform: translateY(9rem);
+        transform: scale(.9) translateY(25rem);
+    }
+
+    @include responsive("xs") {
+        transform: scale(.7) translateY(25rem);
+    }
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    margin-top: 10rem;
+
+    h2 {
+        @include header2(15rem);
+        text-align: center;
+        width: 90%;
+        
+    }
 }

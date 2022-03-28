@@ -1,15 +1,20 @@
+@use '../../../../styles/mixins' as *;
 
 .illustration {
-    width: 50%;
+    // width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5%;
-    
-    &__eth {
-        animation: move 6.5s ease-in-out infinite;
+    padding-right: 10%;
+    @include responsive("lg") {
+        display: none;
     }
 
+}
+
+.eth {
+    animation: move 6.5s ease-in-out infinite;
 }
 
 

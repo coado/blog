@@ -4,10 +4,12 @@ import { Navbar } from '../../Navbar/Navbar';
 import { Illustration } from './Illustration/Illustration';
 
 export const LandingPage = () => {
+    
+
     return (
         <section className={styles.landingPage}>
             <Navbar />
-            <div className={styles.landingPage__mainContent}>
+            <div className={styles.mainContent}>
                 <Hero />
                 <Illustration />
             </div>
