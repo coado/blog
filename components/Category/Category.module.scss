@@ -1,0 +1,16 @@
+.category {
+    background-color: #0F0B22;
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+    margin: 1rem;
+
+}
+
+.text {
+    font-size: 2rem;
+    color: var(--base-color-2);
+}
