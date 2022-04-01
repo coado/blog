@@ -19,18 +19,17 @@ const Posts: NextPage = () => {
               </div>
             </div>
 
-            <div className={styles.categoriesContainer}>
+            <div className={styles.categoriesTextContainer}>
               <h2 className={styles.categoriesHeader}>Categories</h2>
             </div>
 
-            <div className={styles.categories}>
+            <div className={styles.categoriesContainer}>
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
-
             </div>
         </div>
   )

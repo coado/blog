@@ -69,6 +69,10 @@
     &::placeholder {
         color: var(--grey-light);
     }
+
+    &:focus + .loop {
+        transform: scale(1.2) translateX(1rem);
+    }
 }
 
 .loop {
@@ -76,6 +80,7 @@
     width: 2rem;
     height: 2rem;
     color: var(--grey-light);
+    transition: all .2s;
 }
 
 
@@ -87,16 +92,17 @@
     margin-top: 8rem;
 }
 
-.categoriesHeader {
+.categoriesTextContainer {
    color: var(--base-color-2);
    font-size:  clamp(1rem, 3vw, 4rem);
    letter-spacing: .5rem;
+   margin-top: 8rem;
 }
 
-.categories {
+.categoriesContainer {
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(10rem, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
 }
