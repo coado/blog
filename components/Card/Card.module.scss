@@ -1,0 +1,57 @@
+@use '../../styles/mixins' as *;
+
+.card {
+    width: 30rem;
+    height: 40rem;
+    background-color: var(--base-color-4);
+    box-shadow: 0 5px 5px 0px var(--base-color-2);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        background-color: var(--base-color-4);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        left: 8rem;
+        border-top-right-radius: 10rem;
+        box-shadow: 15px -15px 0 15px var(--base-color-3);
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        background-color: var(--base-color-4);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+        right: 8rem;
+        border-top-left-radius: 10rem;
+        box-shadow: -15px -15px 0 15px var(--base-color-3);
+    }
+
+}
+
+
+.iconContainer {
+    //border-radius: 100%;
+    width: 10rem;
+    height: 8rem;
+    background-color: var(--base-color-3);
+    position: absolute;
+    top: -1rem;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    box-shadow: 
+        0 10px 0 rgb(21, 28, 52),
+        inset 0 -4px 0 var(--base-color-2-dark)
+    ;
+    margin: 0 auto;
+}   

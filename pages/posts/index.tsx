@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { Category } from '../../components/Category/Category';
+import { Card } from '../../components/Card/Card';
 import Loop from '../../public/svg/loop.svg';
 
 import styles from './styles.module.scss';
@@ -23,13 +24,23 @@ const Posts: NextPage = () => {
               <h2 className={styles.categoriesHeader}>Categories</h2>
             </div>
 
-            <div className={styles.categoriesContainer}>
+            <div className={styles.categories}>
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
+              <Category text='Smart Contract' />
+              <Category text='Smart Contract' />
+              <Category text='Smart Contract' />
+              <Category text='Smart Contract' />
+            </div>
+
+            <div className={styles.cards}> 
+              <Card />
+              <Card />
+              <Card />
             </div>
         </div>
   )

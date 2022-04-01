@@ -1,3 +1,5 @@
+@use '../../styles/mixins' as *;
+
 .posts {
     display: flex;
     flex-direction: column;
@@ -50,11 +52,16 @@
     justify-content: space-between;
     background-color: transparent;
     box-shadow: 0 0 4px 1px  var(--base-color-2);
-    width: 35%;
+    width: clamp(20rem, 35%, 35%);
     padding: 1.2rem 5rem;
     border-radius: 2rem;
     color: var(--base-color-1);
     letter-spacing: .2rem;
+
+    @include responsive("md") {
+        padding: .8rem 4rem;
+        
+    }
 }
 
 .inputSearch {
@@ -99,10 +106,21 @@
    margin-top: 8rem;
 }
 
-.categoriesContainer {
+.categories {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(5, minmax(10rem, 1fr));
-    grid-auto-rows: auto;
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+    grid-gap: 5rem;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.cards {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem;
+    justify-items: center;
+    margin-top: 10rem;
+    margin-bottom: 30rem;
 }
