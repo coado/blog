@@ -8,7 +8,7 @@ export const Hero = () => {
             <h1> Blog-chain</h1>
             <p>The blog about blockchain </p>
             <p>technology</p>
-            <h6><Link href="#">See all post &#10141;</Link></h6>
+            <h6><Link href="/articles">See all post &#10141;</Link></h6>
         </div>
     )
 }
