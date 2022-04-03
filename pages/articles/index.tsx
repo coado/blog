@@ -33,12 +33,7 @@ const Articles = ({ articles }: { articles: Articles}) => {
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
               <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
+
             </div>
 
             <div className={styles.cards}> 
