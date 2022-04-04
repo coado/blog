@@ -1,17 +1,18 @@
 import styles from './Card.module.scss';
-import Icon from '../../public/svg/skull.svg';
 import Link from 'next/link';
 import { SvgIcon } from '../SvgIcon/SvgIcon';
 
-export const Card = ({ title, date, categories}: {
+export const Card = ({ title, date, slug, categories}: {
     title: string,
     date: string,
+    slug: string,
     categories: string[]
 }) => {
     return (
+        <Link href={`/articles/${slug}`} passHref>
         <div className={styles.card}>
             <div className={styles.iconContainer}>
-                <SvgIcon name = {categories[0]} />
+                <SvgIcon name={categories[0]} />
             </div>
 
             <div className={styles.content}>
@@ -44,5 +45,6 @@ export const Card = ({ title, date, categories}: {
                 </Link>
             </div>
         </div>
+        </Link>
     )
 }

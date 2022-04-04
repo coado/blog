@@ -1,0 +1,28 @@
+
+
+.navigation {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.logo {
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    color: var(--base-color-2);
+}
+
+.return {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--base-color-2);
+    transition: all .2s;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
