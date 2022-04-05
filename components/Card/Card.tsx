@@ -12,7 +12,7 @@ export const Card = ({ title, date, slug, categories}: {
         <Link href={`/articles/${slug}`} passHref>
         <div className={styles.card}>
             <div className={styles.iconContainer}>
-                <SvgIcon name={categories[0]} />
+                <SvgIcon name={categories ? categories[0] : null} />
             </div>
 
             <div className={styles.content}>
@@ -30,7 +30,7 @@ export const Card = ({ title, date, slug, categories}: {
 
                     <div className={styles.categories}>
                         {
-                            categories.map((category, i) => (
+                            categories?.map((category, i) => (
                                 <div key={i} className={styles.category}>
                                     <SvgIcon name={category} />
                                     <p>{category}</p>

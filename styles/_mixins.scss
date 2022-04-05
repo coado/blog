@@ -41,6 +41,10 @@
     }
 }
 
+@mixin mdxHeaderClamp($top_boundary) {
+    font-size: clamp(calc($top_boundary - 1.2rem), 3.8vw, $top_boundary);
+}
+
 
 // A map of breakpoints from bootstrap.
 $breakpoints: (

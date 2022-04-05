@@ -1,0 +1,33 @@
+@use '../../../../styles/mixins' as *;
+
+
+.heading {
+    margin: 5rem 0;
+    color: var(--base-color-2);
+}
+
+
+.h1 {
+    @include mdxHeaderClamp(3.5rem);
+}
+
+.h2 {
+    @include mdxHeaderClamp(3.2rem);
+}
+
+.h3 {
+    @include mdxHeaderClamp(3rem);
+}
+
+.h4 {
+    @include mdxHeaderClamp(2.8rem);
+}
+
+.h5 {
+    @include mdxHeaderClamp(2.5rem);
+}
+
+.h6 {
+    @include mdxHeaderClamp(2.2rem);
+}
+

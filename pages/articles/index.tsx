@@ -43,7 +43,7 @@ const Articles = ({ articles }: { articles: Articles}) => {
                         key = {article.slug} 
                         title = {article.frontmatter.title}
                         date = {article.frontmatter.date}
-                        categories = {article.frontmatter.categories.split(' ')}
+                        categories = {article.frontmatter.categories?.split(' ')}
                         slug={article.slug}
                       /> 
                     ))

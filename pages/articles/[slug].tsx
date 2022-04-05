@@ -6,15 +6,48 @@ import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { marked } from 'marked';
 import { ArticleNavigation } from '../../components/ArticleNavigation/ArticleNavigation';
+import { Mdx } from '../../components/Mdx/Mdx';
+import { useMemo } from 'react';
+
+// MDX COMPONENTS
+import { Heading } from '../../components/Mdx/components/Heading/Heading';
+import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
 
 
-const Article = ({ frontmatter, slug, transformedMdx }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof getStaticProps>) => {
+    
+    const mdxComponents = useMemo(
+        () => (
+            {   
+                h1: (props: {children: string}) => (
+                    <Heading tag='h1' {...props}></Heading>
+                ),
+                h2: (props: {children: string}) => (
+                    <Heading tag='h2' {...props}></Heading>
+                ),
+                h3: (props: {children: string}) => (
+                    <Heading tag='h3' {...props}></Heading>
+                ),
+                h4: (props: {children: string}) => (
+                    <Heading tag='h4' {...props}></Heading>
+                ),
+                h5: (props: {children: string}) => (
+                    <Heading tag='h5' {...props}></Heading>
+                ),
+                h6: (props: {children: string}) => (
+                    <Heading tag='h6' {...props}></Heading>
+                ),
+                Emphasize,
+            }
+        ),[]
+    )
+    
     return (
         <>
             <ArticleNavigation />
-            <main>
-                {/* <MDXRemote {...transformedMdx} /> */}
-            </main>
+                <Mdx frontmatter={frontmatter} >
+                    <MDXRemote {...source} components={mdxComponents} /> 
+                </Mdx>
         </>
     )
 }
@@ -43,7 +76,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
 
     const {data: frontmatter, content} = matter(markDownWithMeta)
 
-    const transformedMdx = await serialize(content, {
+    const source = await serialize(content, {
         scope: frontmatter,
       });
 
@@ -51,7 +84,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
         props: {
             frontmatter,
             slug,
-            transformedMdx
+            source
         }
     }
 }
