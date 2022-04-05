@@ -7,3 +7,10 @@ categories: 'Hacks Smart-Contract Hacks'
 ## Heading here
 
 Post nr. 2
+
+<Emphasize type='important'>
+    VERY IMPORTANT SADASDASDASDASD
+    ASDASDASDASDASDASDASDASDAS
+    ADSADSADASDASDASDADADADADADADADADa
+    adadadadaDADAA
+</Emphasize>

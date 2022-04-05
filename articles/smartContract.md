@@ -20,3 +20,14 @@ lorem ISPUUUUUUUUUUUUUUUUUM
     ADSADSADASDASDASDADADADADADADADADa
     adadadadaDADAA
 </Emphasize>
+
+
+```
+
+const test = "to jest kod testowy"
+
+console.log(test);
+
+```
+
+`important`
