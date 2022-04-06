@@ -22,7 +22,7 @@ lorem ISPUUUUUUUUUUUUUUUUUM
 </Emphasize>
 
 
-```
+```js
 
 const test = "to jest kod testowy"
 

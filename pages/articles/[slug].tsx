@@ -4,7 +4,8 @@ import matter from 'gray-matter';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
-import { marked } from 'marked';
+import remarkCodeTitles from 'remark-code-titles';
+import mdxPrism from 'mdx-prism';
 import { ArticleNavigation } from '../../components/ArticleNavigation/ArticleNavigation';
 import { Mdx } from '../../components/Mdx/Mdx';
 import { useMemo } from 'react';
@@ -77,6 +78,11 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
     const {data: frontmatter, content} = matter(markDownWithMeta)
 
     const source = await serialize(content, {
+        // code styling
+        mdxOptions: {
+            remarkPlugins: [remarkCodeTitles],
+            rehypePlugins: [mdxPrism]
+        },
         scope: frontmatter,
       });
 
