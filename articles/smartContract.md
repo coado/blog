@@ -35,4 +35,12 @@ for (int i = 0; i < 400; i++) {
 
 ```
 
-`important`
+```tsx
+
+const data = await fetch('some url');
+
+const dataJson = await data.json()
+
+console.warning(dataJson)
+
+```
