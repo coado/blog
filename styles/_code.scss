@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;1,200&display=swap');
+
+
+pre[class *= "language-"],
+pre {
+    padding: 2rem 5rem;
+    font-size: 2rem;
+    margin-top: 10rem;
+    hyphens: none;
+    white-space: pre;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    position: relative;
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--base-color-2);
+      border-radius: 12px;
+    }
+
+    &:hover  {
+        &::after {
+            transform: translate(.5rem, .5rem);
+        }
+
+        &::before {
+            transform: translate(-.5rem, -.5rem);
+        }
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        transition: all .2s;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        border-bottom: .5rem solid var(--base-color-2);
+        border-right: .5rem solid var(--base-color-2);
+        
+
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        border-top: .5rem solid var(--base-color-2);
+        border-left: .5rem solid var(--base-color-2);
+    }   
+}
+
+
+code {
+    display: block;
+    overflow: auto;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    scrollbar-width: thin;
+    scrollbar-color: var(--base-color-2) transparent;
+    letter-spacing: .1rem;
+
+    &::-webkit-scrollbar {   
+        height: 4px;
+      }
+
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--base-color-2);
+        border-radius: 20px;
+    }
+
+    .operator {
+        color: var(--operator-color);
+    }
+
+    .string {
+        color: var(--string-color);
+    }
+
+    .punctuation {
+        color: var(--punctuation-color);
+    }
+
+    .function {
+        color: var(--function-color);
+    }
+
+    .keyword {
+        color: var(--keyword-color);
+
+    }
+
+    .builtin {
+        color: var(--builtin-color);
+    }
+
+    .number {
+        color: var(--number-color);
+    }
+
+    .constant {
+        color: var(--constant-color);
+    }
+}

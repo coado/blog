@@ -15,7 +15,7 @@
 
 
 
-    // MDX COLORS
+    // MDX COLORS //////////////////////////////////////////
     --emphasize-important: #24FD66; 
     --emphasize-important-background: #24fd6578;
 
@@ -24,5 +24,17 @@
 
     --emphasize-warning: rgb(252, 201, 60); 
     --emphasize-warning-background: rgba(251, 194, 36, 0.397);
+
+    // CODE 
+
+    --operator-color: rgb(216, 216, 216);
+    --string-color: #b5fd24;
+    --punctuation-color: white;
+    --function-color: #24FD66;
+    --keyword-color: rgb(2, 244, 188);
+    --builtin-color:#24fd65b7;
+    --number-color: rgb(246, 167, 56);
+    --constant-color: rgb(123, 0, 255);
 }
+
 

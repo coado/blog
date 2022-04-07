@@ -24,9 +24,14 @@ lorem ISPUUUUUUUUUUUUUUUUUM
 
 ```js
 
-const test = "to jest kod testowy"
+const test = "to jest kod testowy alalalalalalalal siema siema"
 
 console.log(test);
+
+for (int i = 0; i < 400; i++) {
+    string memory text = 'rererer';
+    transfer(400 ETH);
+}
 
 ```
 
