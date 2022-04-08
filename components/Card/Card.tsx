@@ -40,7 +40,7 @@ export const Card = ({ title, date, slug, categories}: {
                     </div>
                 </div>
 
-                <Link href='/posts'>
+                <Link href={`/articles/${slug}`}>
                     <a className={styles.link}> -- Read -- </a>
                 </Link>
             </div>

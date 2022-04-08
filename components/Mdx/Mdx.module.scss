@@ -16,6 +16,22 @@
     @include responsive("xs") {
         width: 80%;
     }
+
+    
+    ul {    
+        margin-left: 4%;
+
+        li::marker {
+            color: var(--base-color-2);;
+        }        
+    }
+
+    em {
+        color: var(--base-color-2);
+        letter-spacing: .15rem;
+    }
+
+    
 }
 
 .header {
@@ -23,7 +39,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: clamp(4.5rem, 8vw, 8rem);
+    font-size: clamp(4rem, 7vw, 8rem);
     margin-bottom: 10rem;
 
     @include responsive("md") {

@@ -20,10 +20,10 @@ export const Pre = ({ children, ...props}: {children: ReactNode}) => {
 
     const handleCopy = async () => {
         if(preRef.current) {
-            if (navigator) {
+            if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
                 await navigator.clipboard.writeText(preRef.current.innerText)
+                setIsCopied(true)
             }
-            setIsCopied(true)
         }
     }
     

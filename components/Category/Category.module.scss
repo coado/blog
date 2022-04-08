@@ -3,14 +3,15 @@
 
 .category {
     background-color: var(--base-color-4);
-    width: 20rem;
-    height: 5rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: .8rem;
-    cursor: pointer;
+    text-align: center;
     margin: 1rem;
+    
+    cursor: pointer;
     transition: all .2s;
 
     &:hover {

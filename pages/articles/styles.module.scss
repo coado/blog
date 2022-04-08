@@ -5,6 +5,8 @@
     flex-direction: column;
     height: auto;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
 
 }
 
@@ -66,7 +68,7 @@
 .categories {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 23rem));
     grid-gap: 5rem;
     justify-content: center;
     margin-top: 10rem;

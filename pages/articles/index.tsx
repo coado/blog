@@ -29,10 +29,10 @@ const Articles = ({ articles }: { articles: Articles}) => {
             </div>
 
             <div className={styles.categories}>
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
-              <Category text='Smart Contract' />
+              <Category text='smart-contract' />
+              <Category text='smart-contract' />
+              <Category text='smart-contract' />
+              <Category text='smart-contract' />
 
             </div>
 
