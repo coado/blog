@@ -14,6 +14,7 @@ import { useMemo } from 'react';
 import { Heading } from '../../components/Mdx/components/Heading/Heading';
 import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
 import { Pre } from '../../components/Mdx/components/Pre/Pre';
+import { Image } from '../../components/Mdx/components/Image/Image';
 
 
 const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -40,6 +41,7 @@ const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof g
                     <Heading tag='h6' {...props}></Heading>
                 ),
                 Emphasize,
+                Image,
                 pre: Pre
             }
         ),[]

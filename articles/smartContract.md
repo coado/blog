@@ -42,3 +42,6 @@ const dataJson = await data.json()
 console.warning(dataJson)
 
 ```
+
+
+<Image src='/images/image.jpg' alt='Image asdadasdadasd' width="600" height="700" />
