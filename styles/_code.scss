@@ -1,5 +1,5 @@
+@use './mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500&display=swap');
-
 
 pre[class *= "language-"],
 pre {
@@ -37,9 +37,11 @@ pre {
         content: '';
         display: block;
         position: absolute;
-        width: 10rem;
-        height: 10rem;
+        width: clamp(5rem, 8vw, 10rem);
+        height: clamp(5rem, 8vw, 10rem);
         transition: all .2s;
+
+      
     }
 
     &::after {
@@ -48,6 +50,10 @@ pre {
         border-bottom: .5rem solid var(--base-color-2);
         border-right: .5rem solid var(--base-color-2);
         
+        @include responsive("sm") {
+            border-bottom: .2rem solid var(--base-color-2);
+            border-right: .2rem solid var(--base-color-2);
+        }
 
     }
 
@@ -56,6 +62,11 @@ pre {
         left: 0;
         border-top: .5rem solid var(--base-color-2);
         border-left: .5rem solid var(--base-color-2);
+
+        @include responsive("sm") {
+            border-top: .2rem solid var(--base-color-2);
+            border-left: .2rem solid var(--base-color-2);
+        }
     }   
 }
 
@@ -65,12 +76,17 @@ code {
     overflow: auto;
     font-family: 'League Spartan', sans-serif;
     font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 2rem);
     scrollbar-width: thin;
     scrollbar-color: var(--base-color-2) transparent;
     letter-spacing: .1rem;
 
     &::-webkit-scrollbar {   
         height: 4px;
+
+        @include responsive("sm") {
+            height: 2px;
+        }
       }
 
 
@@ -110,5 +126,21 @@ code {
 
     .constant {
         color: var(--constant-color);
+    }
+}
+
+:not(pre) > code {
+    color: var(--base-color-2);
+    padding: .5rem 1.5rem;
+    background-color: var(--base-color-4-light);
+    display: inline;
+    border-radius: .5rem;
+
+    @include responsive("md") {
+        padding: .3rem 1rem;
+    }
+
+    @include responsive("xs") {
+        padding: .2rem .8rem;
     }
 }

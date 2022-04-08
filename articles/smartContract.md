@@ -9,9 +9,7 @@ categories: 'Hacks Smart-Contract'
 Post nr. 1
 
 
-ASDNASKDASNDASDNASD
-
-lorem ISPUUUUUUUUUUUUUUUUUM
+This is `text` about something realy important
 
 
 <Emphasize type='warning'>

@@ -13,6 +13,7 @@ import { useMemo } from 'react';
 // MDX COMPONENTS
 import { Heading } from '../../components/Mdx/components/Heading/Heading';
 import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
+import { Pre } from '../../components/Mdx/components/Pre/Pre';
 
 
 const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -39,6 +40,7 @@ const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof g
                     <Heading tag='h6' {...props}></Heading>
                 ),
                 Emphasize,
+                pre: Pre
             }
         ),[]
     )
