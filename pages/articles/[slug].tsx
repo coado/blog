@@ -8,6 +8,7 @@ import remarkCodeTitles from 'remark-code-titles';
 import mdxPrism from 'mdx-prism';
 import { ArticleNavigation } from '../../components/ArticleNavigation/ArticleNavigation';
 import { Mdx } from '../../components/Mdx/Mdx';
+import readingTime from 'reading-time';
 import { useMemo } from 'react';
 
 // MDX COMPONENTS
@@ -17,7 +18,7 @@ import { Pre } from '../../components/Mdx/components/Pre/Pre';
 import { Image } from '../../components/Mdx/components/Image/Image';
 
 
-const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Article = ({ frontmatter, source, readTime }: InferGetStaticPropsType<typeof getStaticProps>) => {
     
     const mdxComponents = useMemo(
         () => (
@@ -50,9 +51,9 @@ const Article = ({ frontmatter, slug, source }: InferGetStaticPropsType<typeof g
     return (
         <>
             <ArticleNavigation />
-                <Mdx frontmatter={frontmatter} >
-                    <MDXRemote {...source} components={mdxComponents} /> 
-                </Mdx>
+            <Mdx readTime={readTime} frontmatter={frontmatter} >
+                <MDXRemote {...source} components={mdxComponents} /> 
+            </Mdx>
         </>
     )
 }
@@ -78,7 +79,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
     const markDownWithMeta = fs.readFileSync(path.join('articles', slug + '.md'), 'utf-8')
-
+    const readTime = readingTime(markDownWithMeta).minutes
     const {data: frontmatter, content} = matter(markDownWithMeta)
 
     const source = await serialize(content, {
@@ -93,8 +94,8 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
     return {
         props: {
             frontmatter,
-            slug,
-            source
+            source,
+            readTime
         }
     }
 }

@@ -16,23 +16,7 @@
 }
 
 .input {
-    width: 40rem;
-    height: 6rem;
-background-color: rgba(196, 196, 196, 0.08);
-    border: none;
-    border-radius: .5rem;
-    box-shadow: inset 0px 0px 7px 3px var(--base-color-2);
-    color: white;
-    font-size: 1.6rem;
-    padding: 1rem 3rem;
-    letter-spacing: .3rem;
-    outline: none;
-
-    @include responsive("xs") {
-        width: 30rem;
-        height: 5rem;
-        font-size: 1.4rem;
-    }
+    @include inputEmail;
 }
 
 .subscribe {

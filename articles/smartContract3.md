@@ -1,6 +1,6 @@
 ---
 title: 'This is the post nr. 3'
-date: 'June 01 2022'
+date: '02-08-2022'
 categories: 'Hacks'
 ---
 

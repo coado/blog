@@ -2,13 +2,15 @@ import { ReactNode } from 'react';
 import styles from './Mdx.module.scss';
 import { Frontmatter } from '../../types/types';
 import { Category } from '../Category/Category';
+import { Newsletter } from '../Mdx/components/Newsletter/Newsletter';
 
 interface MdxProps {
     frontmatter: Frontmatter;
     children: ReactNode;
+    readTime: number;
 }
 
-export const Mdx = ({ frontmatter, children }: MdxProps) => {
+export const Mdx = ({ frontmatter, children, readTime }: MdxProps) => {
     return (
         <article className={styles.article}>
             <header className={styles.header} >
@@ -23,15 +25,15 @@ export const Mdx = ({ frontmatter, children }: MdxProps) => {
                 </h1>
 
                 <div className={styles.articleData}>
-                    <p>5 minute read</p>
-                    <p>14.11.2022</p>
+                    <p>{Math.ceil(readTime)} minute read</p>
+                    <p>{ frontmatter.date }</p>
                 </div>
             </header>       
             
             <main className={styles.main}>
                 {children}                  
             </main>
-                
+            <Newsletter />
         </article>
     )
 }

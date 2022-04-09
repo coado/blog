@@ -2,10 +2,11 @@ import styles from './Card.module.scss';
 import Link from 'next/link';
 import { SvgIcon } from '../SvgIcon/SvgIcon';
 
-export const Card = ({ title, date, slug, categories}: {
+export const Card = ({ title, date, slug, categories, readTime}: {
     title: string,
     date: string,
     slug: string,
+    readTime: number,
     categories: string[]
 }) => {
     return (
@@ -19,7 +20,7 @@ export const Card = ({ title, date, slug, categories}: {
 
                 <div className={styles.wrapper}>
                     <div className={styles.postData}>
-                        <p> 5 minutes </p>
+                        <p> {Math.ceil(readTime)} minutes </p>
                         <p> { date } </p>
                     </div>
                     <div className={styles.titleContainer}>

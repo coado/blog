@@ -1,21 +1,14 @@
-
 import { Category } from '../../components/Category/Category';
 import { Card } from '../../components/Card/Card';
 import styles from './styles.module.scss';
-
+import readingTime from 'reading-time';
 import matter from "gray-matter";
 import fs from 'fs';
 import path from 'path';
 import { useState } from 'react';
+import { sortArticlesByDate } from '../../lib/mdx';
 
-type Articles = {
-  slug: string,
-  frontmatter: {
-    "title": string,
-    "date": string,
-    "categories": string
-  }
-}[]
+import type { Articles, Frontmatter } from '../../types/types';
 
 const Articles = ({ articles }: { articles: Articles}) => {
 
@@ -26,7 +19,7 @@ const Articles = ({ articles }: { articles: Articles}) => {
     if (category === 'all') {
       filteredArticles = articles
     } else {
-      filteredArticles = articles.filter(article => article.frontmatter.categories.split(' ').includes(category))
+      filteredArticles = articles.filter(article => article.categories.split(' ').includes(category))
     }
     setCurrentArticles(filteredArticles)
   } 
@@ -55,13 +48,14 @@ const Articles = ({ articles }: { articles: Articles}) => {
                 currentArticles.map(article => (
                       <Card 
                         key = {article.slug} 
-                        title = {article.frontmatter.title}
-                        date = {article.frontmatter.date}
-                        categories = {article.frontmatter.categories?.split(' ')}
+                        title = {article.title}
+                        date = {article.date}
+                        categories = {article.categories?.split(' ')}
                         slug={article.slug}
+                        readTime={article.readTime}
                       /> 
                     ))
-              }
+              } 
             </div>
         </div>
   )
@@ -76,17 +70,22 @@ export async function getStaticProps() {
 
     const markdownWithMeta = fs.readFileSync(path.join('articles', filename), 'utf-8')
 
-    const {data: frontmatter} = matter(markdownWithMeta)
+    const readTime = readingTime(markdownWithMeta).minutes
+
+    const {data: frontmatter}  = matter(markdownWithMeta)
 
     return {
       slug, 
-      frontmatter
+      ...frontmatter,
+      readTime
     }  
-  })
+  }) as Articles
+
+  const sortedArticles = sortArticlesByDate(articles)
 
   return {
     props: {
-      articles
+      articles: sortedArticles
     }
   }
   
