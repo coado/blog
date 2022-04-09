@@ -12,6 +12,7 @@
     justify-content: space-around;
     position: relative;
     cursor: pointer;
+    animation: show .3s ease-out;
     transition: all .2s;
 
     &::after {
@@ -175,5 +176,16 @@
 
     @include responsive("xs") {
         font-size: 2.5rem;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        opacity: 1;
     }
 }

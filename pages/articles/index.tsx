@@ -1,23 +1,37 @@
 
 import { Category } from '../../components/Category/Category';
 import { Card } from '../../components/Card/Card';
-
 import styles from './styles.module.scss';
 
 import matter from "gray-matter";
 import fs from 'fs';
 import path from 'path';
+import { useState } from 'react';
 
-type Articles = [{
+type Articles = {
   slug: string,
   frontmatter: {
     "title": string,
     "date": string,
     "categories": string
   }
-}]
+}[]
 
 const Articles = ({ articles }: { articles: Articles}) => {
+
+  const [currentArticles, setCurrentArticles] = useState(articles)
+
+  const filterArticles = (category: string) => {
+    let filteredArticles: Articles;
+    if (category === 'all') {
+      filteredArticles = articles
+    } else {
+      filteredArticles = articles.filter(article => article.frontmatter.categories.split(' ').includes(category))
+    }
+    setCurrentArticles(filteredArticles)
+  } 
+  
+
   return (
         <div className={styles.posts}>
             <div className={styles.articles}>
@@ -29,16 +43,16 @@ const Articles = ({ articles }: { articles: Articles}) => {
             </div>
 
             <div className={styles.categories}>
-              <Category text='smart-contract' />
-              <Category text='smart-contract' />
-              <Category text='smart-contract' />
-              <Category text='smart-contract' />
+              <Category filter={filterArticles} text='all' />
+              <Category filter={filterArticles} text='Hacks' />
+              <Category filter={filterArticles} text='Smart-Contract' />
+              <Category filter={filterArticles} text='Smart-Contract' />
 
             </div>
 
             <div className={styles.cards}> 
               {
-                articles.map(article => (
+                currentArticles.map(article => (
                       <Card 
                         key = {article.slug} 
                         title = {article.frontmatter.title}
