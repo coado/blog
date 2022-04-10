@@ -55,14 +55,24 @@
     color: white;
     font-size: 1.6rem;
     padding: 1rem 3rem;
-    letter-spacing: .3rem;
+    letter-spacing: .2rem;
     outline: none;
+}
 
-    @include responsive("xs") {
-        width: 30rem;
-        height: 5rem;
-        font-size: 1.4rem;
+@mixin subscribeEmail {
+    background-color: transparent;
+    border: none;
+    color: var(--base-color-2);
+    letter-spacing: .3rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        opacity: 0.8;
     }
+
 }
 
 // A map of breakpoints from bootstrap.

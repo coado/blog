@@ -17,24 +17,15 @@
 
 .input {
     @include inputEmail;
+
+    @include responsive("xs") {
+        width: 30rem;
+        height: 5rem;
+        font-size: 1.4rem;
+    }
 }
 
 .subscribe {
-    background-color: transparent;
-    border: none;
+    @include subscribeEmail;
     margin-top: 2rem;
-    color: var(--base-color-2);
-    letter-spacing: .3rem;
-    font-size: 2.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .2s;
-
-    &:hover {
-        opacity: 0.8;
-    }
-
-    @include responsive("sm") {
-        font-size: 2rem;
-    }
 }
