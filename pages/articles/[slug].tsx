@@ -16,9 +16,10 @@ import { Heading } from '../../components/Mdx/components/Heading/Heading';
 import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
 import { Pre } from '../../components/Mdx/components/Pre/Pre';
 import { Image } from '../../components/Mdx/components/Image/Image';
+import { LatestPosts } from '../../components/LatestPosts/LatestPosts';
 
 
-const Article = ({ frontmatter, source, readTime }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Article = ({ frontmatter, source, readTime, slug }: InferGetStaticPropsType<typeof getStaticProps>) => {
     
     const mdxComponents = useMemo(
         () => (
@@ -54,6 +55,7 @@ const Article = ({ frontmatter, source, readTime }: InferGetStaticPropsType<type
             <Mdx readTime={readTime} frontmatter={frontmatter} >
                 <MDXRemote {...source} components={mdxComponents} /> 
             </Mdx>
+            <LatestPosts slug='adsda' />
         </>
     )
 }
@@ -95,7 +97,8 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
         props: {
             frontmatter,
             source,
-            readTime
+            readTime,
+            slug
         }
     }
 }

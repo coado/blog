@@ -17,6 +17,8 @@
 
 .input {
     @include inputEmail;
+    box-shadow: inset 0px 0px 5px 1px var(--base-color-2);
+    width: 40rem;
 
     @include responsive("xs") {
         width: 30rem;

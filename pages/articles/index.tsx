@@ -1,12 +1,9 @@
 import { Category } from '../../components/Category/Category';
 import { Card } from '../../components/Card/Card';
 import styles from './styles.module.scss';
-import readingTime from 'reading-time';
-import matter from "gray-matter";
-import fs from 'fs';
-import path from 'path';
 import { useState } from 'react';
 import { sortArticlesByDate } from '../../lib/mdx';
+import { getAllPosts } from '../../lib/mdx';
 
 import type { Articles, Frontmatter } from '../../types/types';
 
@@ -62,30 +59,11 @@ const Articles = ({ articles }: { articles: Articles}) => {
 }
 
 export async function getStaticProps() {
-  // Get all files from the articles
-  const files = fs.readdirSync(path.join('articles'))
-  
-  const articles = files.filter(filename => filename.includes('.md')).map(filename => {
-    const slug = filename.replace('.md', '')
-
-    const markdownWithMeta = fs.readFileSync(path.join('articles', filename), 'utf-8')
-
-    const readTime = readingTime(markdownWithMeta).minutes
-
-    const {data: frontmatter}  = matter(markdownWithMeta)
-
-    return {
-      slug, 
-      ...frontmatter,
-      readTime
-    }  
-  }) as Articles
-
-  const sortedArticles = sortArticlesByDate(articles)
+  const articles = sortArticlesByDate(getAllPosts())
 
   return {
     props: {
-      articles: sortedArticles
+      articles
     }
   }
   
