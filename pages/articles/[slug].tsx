@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkCodeTitles from 'remark-code-titles';
@@ -10,6 +10,8 @@ import { ArticleNavigation } from '../../components/ArticleNavigation/ArticleNav
 import { Mdx } from '../../components/Mdx/Mdx';
 import readingTime from 'reading-time';
 import { useMemo } from 'react';
+import { getThreeLatestPostsWithoutOne } from '../../lib/mdx';
+import type { Frontmatter } from '../../types/types';
 
 // MDX COMPONENTS
 import { Heading } from '../../components/Mdx/components/Heading/Heading';
@@ -19,7 +21,7 @@ import { Image } from '../../components/Mdx/components/Image/Image';
 import { LatestPosts } from '../../components/LatestPosts/LatestPosts';
 
 
-const Article = ({ frontmatter, source, readTime, slug }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     
     const mdxComponents = useMemo(
         () => (
@@ -52,10 +54,10 @@ const Article = ({ frontmatter, source, readTime, slug }: InferGetStaticPropsTyp
     return (
         <>
             <ArticleNavigation />
-            <Mdx readTime={readTime} frontmatter={frontmatter} >
+            <Mdx readTime={readTime} frontmatter={frontmatter as Frontmatter} >
                 <MDXRemote {...source} components={mdxComponents} /> 
             </Mdx>
-            <LatestPosts slug='adsda' />
+            <LatestPosts newestPosts={newestPosts} />
         </>
     )
 }
@@ -79,7 +81,7 @@ export async function getStaticPaths() {
 }
 
 
-export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
+export const getStaticProps = async ({ params: { slug  }}: {params: {slug: string}}) => {
     const markDownWithMeta = fs.readFileSync(path.join('articles', slug + '.md'), 'utf-8')
     const readTime = readingTime(markDownWithMeta).minutes
     const {data: frontmatter, content} = matter(markDownWithMeta)
@@ -93,12 +95,14 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug }}) => {
         scope: frontmatter,
       });
 
+      const newestPosts = getThreeLatestPostsWithoutOne(slug)
+
     return {
         props: {
             frontmatter,
             source,
             readTime,
-            slug
+            newestPosts
         }
     }
 }

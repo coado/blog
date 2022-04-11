@@ -3,6 +3,7 @@
 .card {
     width: 30rem;
     height: 40rem;
+    margin: 6rem 3rem;
     background-color: var(--base-color-4);
     box-shadow: 0 5px 5px 0px var(--base-color-2);
     border-radius: 2rem;
@@ -58,6 +59,10 @@
     @include responsive("xs") {
         width: 25rem;
         height: 38rem;
+
+        &:hover .iconContainer svg {
+            transform: translateY(-4.5rem);
+        }
     }
 }
 
@@ -86,6 +91,16 @@
         transform: translateY(-4rem);
         color: var(--base-color-2);
         transition: all .2s;
+    }
+
+    @include responsive("xs") {
+        width: 8rem;
+        height: 6rem;
+
+        svg {
+            width: 8rem;
+            height: 8rem;
+        }
     }
 }   
 

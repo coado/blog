@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 5rem;  
-    margin-bottom: 50rem;
     flex-wrap: wrap;
     
     @include responsive("lg") {
