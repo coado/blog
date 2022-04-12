@@ -10,6 +10,7 @@ import type { Articles, Frontmatter } from '../../types/types';
 const Articles = ({ articles }: { articles: Articles}) => {
 
   const [currentArticles, setCurrentArticles] = useState(articles)
+  const [currentCategory, setCurrentCategory] = useState<string>('all')
 
   const filterArticles = (category: string) => {
     let filteredArticles: Articles;
@@ -19,10 +20,12 @@ const Articles = ({ articles }: { articles: Articles}) => {
       filteredArticles = articles.filter(article => article.categories.split(' ').includes(category))
     }
     setCurrentArticles(filteredArticles)
+    setCurrentCategory(category)
   } 
   
 
   return (
+    <>
         <div className={styles.posts}>
             <div className={styles.articles}>
                 <h1 className={styles.header}>Articles</h1>
@@ -39,6 +42,8 @@ const Articles = ({ articles }: { articles: Articles}) => {
               <Category filter={filterArticles} text='Smart-Contract' />
 
             </div>
+            
+            <h3 className={styles.currentCategory}> {currentCategory} </h3>
 
             <div className={styles.cards}> 
               {
@@ -55,6 +60,7 @@ const Articles = ({ articles }: { articles: Articles}) => {
               } 
             </div>
         </div>
+      </>
   )
 }
 

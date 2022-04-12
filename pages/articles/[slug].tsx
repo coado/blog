@@ -12,6 +12,7 @@ import readingTime from 'reading-time';
 import { useMemo } from 'react';
 import { getThreeLatestPostsWithoutOne } from '../../lib/mdx';
 import type { Frontmatter } from '../../types/types';
+import { Footer } from '../../components/Footer/Footer';
 
 // MDX COMPONENTS
 import { Heading } from '../../components/Mdx/components/Heading/Heading';

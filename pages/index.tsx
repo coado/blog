@@ -4,7 +4,6 @@ import { NewPost } from '../components/sections/NewPost/NewPost';
 import { About } from '../components/sections/About/About';
 import { Community } from '../components/sections/Community/Community';
 import { Newsletter } from '../components/sections/Newsletter/Newsletter';
-import { Footer } from '../components/sections/Footer/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +13,6 @@ const Home: NextPage = () => {
       <About />
       <Community />
       <Newsletter />
-      <Footer />
     </>
   )
 }
