@@ -3,8 +3,8 @@ import Waves from '../../public/svg/waves.svg';
 
 export const Footer = () => {
     return (
-        <div className={styles.footer}>
+        <footer className={styles.footer}>
             <Waves className={styles.svg} />
-        </div>
+        </footer>
     )
 }
