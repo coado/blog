@@ -1,5 +1,6 @@
-import Skull from '../../public/svg/skull.svg';
+import Hacks from '../../public/svg/hacks.svg';
 import SmartContract from '../../public/svg/smart_contract.svg';
+import Algoritms from '../../public/svg/algorithms.svg';
 
 
 export const SvgIcon = ({ name }: {name: string}) => {
@@ -7,9 +8,11 @@ export const SvgIcon = ({ name }: {name: string}) => {
     const getIcon = () => {
         switch (name) {
             case "Hacks":
-                return <Skull />
+                return <Hacks />
             case "Smart-Contract":
                 return <SmartContract />
+            case "Algorithms":
+                return <Algoritms /> 
             default:
                 return <></>
         }

@@ -4,6 +4,20 @@ date: '01-01-2021'
 categories: 'Smart-Contract'
 ---
 
+
+<Topics topics={[
+    'What are algorithmic stablecoins?',
+    'Types of algorithmic stablecoins',
+    'Rebase',
+    'Seigniorage',
+    'Fractional',
+    'Risks',
+    'Summary'
+    ]} />
+
+
+
+
 # Heading here
 
 Post nr. 1

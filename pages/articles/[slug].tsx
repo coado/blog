@@ -12,15 +12,15 @@ import readingTime from 'reading-time';
 import { useMemo } from 'react';
 import { getThreeLatestPostsWithoutOne } from '../../lib/mdx';
 import type { Frontmatter } from '../../types/types';
-import { Footer } from '../../components/Footer/Footer';
+import { LatestPosts } from '../../components/LatestPosts/LatestPosts';
+
 
 // MDX COMPONENTS
 import { Heading } from '../../components/Mdx/components/Heading/Heading';
 import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
 import { Pre } from '../../components/Mdx/components/Pre/Pre';
 import { Image } from '../../components/Mdx/components/Image/Image';
-import { LatestPosts } from '../../components/LatestPosts/LatestPosts';
-
+import { Topics } from '../../components/Mdx/components/Topics/Topics'
 
 const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     
@@ -47,7 +47,8 @@ const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticP
                 ),
                 Emphasize,
                 Image,
-                pre: Pre
+                pre: Pre,
+                Topics
             }
         ),[]
     )

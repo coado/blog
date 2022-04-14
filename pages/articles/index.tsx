@@ -39,7 +39,7 @@ const Articles = ({ articles }: { articles: Articles}) => {
               <Category filter={filterArticles} text='all' />
               <Category filter={filterArticles} text='Hacks' />
               <Category filter={filterArticles} text='Smart-Contract' />
-              <Category filter={filterArticles} text='Smart-Contract' />
+              <Category filter={filterArticles} text='Algorithms' />
 
             </div>
             

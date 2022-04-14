@@ -1,0 +1,23 @@
+
+
+.topics {
+    width: 100%;
+    background-color: var(--base-color-4);
+    border-radius: 1rem;
+    padding: 5rem 4rem;
+    margin-top: 10rem;
+    line-height: clamp(2.7rem, 5vw, 5rem);
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: -4rem;
+    left: 2rem;
+    color: var(--base-color-2);
+    letter-spacing: .3rem;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    background-color: var(--base-color-4);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+}
