@@ -17,25 +17,25 @@
     }
 
     
-    ul {    
-        margin-left: 4%;
-
-        li::marker {
-            color: var(--base-color-2);;
-        }        
-    }
-
-    em {
-        color: var(--base-color-2);
-        letter-spacing: .15rem;
-    }
-
-    p {
-        margin-top: 5rem;
-        line-height: 3.5rem;
-    }
-
+    main {
+        ul {    
+            margin-left: 4%;
     
+            li::marker {
+                color: var(--base-color-2);;
+            }        
+        }
+    
+        em {
+            color: var(--base-color-2);
+            letter-spacing: .15rem;
+        }
+    
+        p {
+            margin-top: 5rem;
+            line-height: 3.5rem;
+        }
+    }
 }
 
 .header {

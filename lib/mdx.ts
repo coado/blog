@@ -39,3 +39,7 @@ export const getAllPosts = () => {
 export const getThreeLatestPostsWithoutOne = (slug: string) => {
     return sortArticlesByDate(getAllPosts().filter(article => article.slug !== slug).slice(0, 3))
 }
+
+export const getLatestPost = () => {
+    return (sortArticlesByDate(getAllPosts()))[0]
+}

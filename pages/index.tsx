@@ -5,16 +5,30 @@ import { About } from '../components/sections/About/About';
 import { Community } from '../components/sections/Community/Community';
 import { Newsletter } from '../components/sections/Newsletter/Newsletter';
 
-const Home: NextPage = () => {
+import { getLatestPost } from '../lib/mdx';
+import type { Article } from "../types/types";
+
+const Home = ({ latestPost }: { latestPost: Article }) => {
   return (
     <>
       <LandingPage />
-      <NewPost />
+      <NewPost latestPost={latestPost} />
       <About />
       <Community />
       <Newsletter />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const latestPost = getLatestPost()
+  console.log(latestPost);
+  
+  return {
+      props: {
+          latestPost
+      }
+  }
 }
 
 export default Home

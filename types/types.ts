@@ -5,7 +5,7 @@ export type Frontmatter = {
     categories: string;
 }
 
-type Article = {
+export type Article = {
     slug: string,
     readTime: number,
     title: string;

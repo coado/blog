@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { sortArticlesByDate } from '../../lib/mdx';
 import { getAllPosts } from '../../lib/mdx';
 
-import type { Articles, Frontmatter } from '../../types/types';
+import type { Articles } from '../../types/types';
 
 const Articles = ({ articles }: { articles: Articles}) => {
 
