@@ -38,4 +38,21 @@ This means that today the account A has 10 tokens worth 10$, but tommorow it mig
 
 Let's focus on the chart for a moment. As you can see, there is `P` value which indicates desirable price of the token, and `n` value, which indicates our treshold. Whenever the price passes the threshold, the algorithm starts running and the price is stabilizing.
 
+<Image src='/images/algorithmic-stablecoins/chart2.png' alt='Volatility of the AMPL rebased stablecoin' width="800" height="400" />
+
+As you can conclude from the chart above, the algorithm tries to stabilize the price, but it is definitely far from perfection.
+
 ## Seigniorage stablecoins
+
+The seigniorage algorithm model contains several types of tokens that are used to stabilize the price:
+- Basis Cash
+- Basis Shares
+- Basis Bonds 
+
+Let's assume that our `Basis Cash` token is pegged to 1$. If its rate rises above 1$, the program mints new tokens that are given away to `Basis Shares` token holders. This operation causes sell pressure and the price starts falling. When the rate of the token falls below 1$ holders are given `Basis Bonds` for burning their `Basis Cash` tokens. After all, when the price is above 1$ again, users can exchange Basis Bonds for Basis Cash tokens. As you can see, this mechanism allows holders to obtain fees constantly.
+
+To give you an example of a real use case of this mechanism, let's have a look at the Terra ecosystem which consists of a `Luna Token` as a Basis Shares token and for instance a `TerraUSD Token` as a Basis Cash ( There is no Basis Shares token ). If the TerraUSD price is lower than the coveted 1$, let's say 0.9$, then users will sell their TerraUSD tokens to the system and receive 1$ worth of the Luna token. The algorithm would burn received TerraUSD tokens and mint new Luna tokens in exchange. Similarly, if the rate rises above 1%, let's say 1.1$ then users will buy the TerraUSD tokens for 1$ worth of the Luna tokens. The system would burn Luna tokens and mint TerraUSD tokens in exchange. That is how the price is continuously stabilized, and the arbitrageurs earn passive income.    
+
+<Image src='/images/algorithmic-stablecoins/chart3.png' alt='Volatility of the UST stablecoin' width="800" height="400" />
+
+As we can conclude from the chart above, the algorithm does a pretty good job. 
