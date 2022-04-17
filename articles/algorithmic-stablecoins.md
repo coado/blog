@@ -56,3 +56,7 @@ To give you an example of a real use case of this mechanism, let's have a look a
 <Image src='/images/algorithmic-stablecoins/chart3.png' alt='Volatility of the UST stablecoin' width="800" height="400" />
 
 As we can conclude from the chart above, the algorithm does a pretty good job. 
+
+## Fractional stablecoins
+
+Fractional stablecoins are both `collaterally-backed` and `algorithmically modified`. Tokens are less than 100% collateralized with other stablecoins like USDC, so in other words, there could be more coins than fiat-baked tokens. It improves the efficiency as long as the algorithm stabilizes the price of the token. The program works alike to seigniorage tokens, so the algorithm burns or mints a second token and encourages users to sell and buy tokens which cause price stabilization.
