@@ -60,3 +60,9 @@ As we can conclude from the chart above, the algorithm does a pretty good job.
 ## Fractional stablecoins
 
 Fractional stablecoins are both `collaterally-backed` and `algorithmically modified`. Tokens are less than 100% collateralized with other stablecoins like USDC, so in other words, there could be more coins than fiat-baked tokens. It improves the efficiency as long as the algorithm stabilizes the price of the token. The program works alike to seigniorage tokens, so the algorithm burns or mints a second token and encourages users to sell and buy tokens which cause price stabilization.
+
+## Advanteges and drawbacks of algorithmic stablecoins
+
+As long as algorithmic stablecoins provide stability and security to investors' money, there are a few advantages that arise. Firstly, those algorithms enable earning passive income for the holders. Accumulating stablecoins long-term and getting almost certain enrichment is a much more secure idea, than buying random altcoin. Secondly, algorithmic stablecoins are decentralized entities, which means, that there is no risk behind some third-party organizations or companies' foul-ups.  
+
+Regarding drawbacks, algorithmic stablecoins utterly rely on the program, which means that, if some hacker finds a vulnerability in the smart contract or the system will just fail, all of the money would be gone! Therefore, it is really important to check, if the stablecoin has some contract authentication and if it was tested thoroughly. Moreover, holding your savings in a poorly stabilized token would lead to some loss of money due to volatility. The best idea is to never hold all cash in one token.  
