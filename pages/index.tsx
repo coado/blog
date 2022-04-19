@@ -8,6 +8,10 @@ import { Newsletter } from '../components/sections/Newsletter/Newsletter';
 import { getLatestPost } from '../lib/mdx';
 import type { Article } from "../types/types";
 
+
+// TODO: ADD SEO 
+
+
 const Home = ({ latestPost }: { latestPost: Article }) => {
   return (
     <>

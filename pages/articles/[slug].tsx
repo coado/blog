@@ -22,6 +22,8 @@ import { Pre } from '../../components/Mdx/components/Pre/Pre';
 import { Image } from '../../components/Mdx/components/Image/Image';
 import { Topics } from '../../components/Mdx/components/Topics/Topics'
 
+// TODO - ADD SEO
+
 const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     
     const mdxComponents = useMemo(
