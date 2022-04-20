@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { NextSeo, ArticleJsonLd } from 'next-seo';
 import { InferGetStaticPropsType } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
@@ -56,7 +57,23 @@ const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticP
     )
     
     return (
-        <>
+        <>  
+            <NextSeo 
+                // TODO ////////////////////////////////////
+            />
+
+            <ArticleJsonLd 
+                url={''}
+                title={frontmatter.title}
+                images={[]}
+                description={frontmatter.slug}
+                datePublished={frontmatter.date}
+                authorName='Veo'
+
+                // TODO ////////////////////////////////////
+            
+            />
+
             <ArticleNavigation />
             <Mdx readTime={readTime} frontmatter={frontmatter as Frontmatter} >
                 <MDXRemote {...source} components={mdxComponents} /> 
