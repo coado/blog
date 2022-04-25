@@ -1,25 +1,16 @@
 ---
-title: 'How Bitcoin works?'
+title: 'How the block looks like in the bitcoin network?'
 date: '04-19-2022'
-categories: 'Bitcoin'
+categories: 'Bitcoin algorithms'
 ---
 
 <Topics topics={[
-    'Transactions',
-    'Timestamp Server',
-    'Proof-of-Work',
-    'Network',
-    'Incentive',
-    'Disk Space',
-    'Payment Verification',
-    'Combining and Splittinh Value',
-    'Privacy',
-    'Calculations',
-    'Conclusion'
+    'How the new block is created?',
+    'What data each block contains?',
+    'Transactions merkle tree',
+    'What is UTXO?'
 ]} />
 
-## Transactions
+## How the new block is created?
 
-One of the definition of electronic coins is a chain of digital signatures. Transactions are created by digitally signing a hash of the previous transaction and the public key of the next owner. So, there is possibility to verify the chain of the ownership.
-
-<Image src='/images/how-bitcoin-works/image1.png' alt='Data that transaction contain' width="800" height="300" />
+Transactions, which have been created by users, wait in the mempool (memory pool) in order to be processed by a miner. Transactions with higher fees have priority to be authorized, so they are attached to the block first. Moreover, the nonce value and a previous block hash are added to the block too.
