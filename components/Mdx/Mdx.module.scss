@@ -20,10 +20,15 @@
     main {
         ul {    
             margin-left: 4%;
+            margin-top: 1.5rem;
     
             li::marker {
                 color: var(--base-color-2);;
             }        
+
+            li {
+                margin-top: .5rem;
+            }
         }
     
         em {

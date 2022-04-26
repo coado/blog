@@ -14,7 +14,7 @@ categories: 'Algorithms'
 ]} />
 
 
-# What are algorithmic stablecoins?
+# What are the algorithmic stablecoins?
 
 Let's assume that you are storing your money in `collateralized` non-algorithmic stablecoin. What does it mean is the company which stays behind it has potentially some reserves in real money. What if something bad happen and all of that company's treasury would be frozen? Well, price would start dropping and your money would be gone. That is where algorithmic stablecoins coming in. Basically, the difference between those two is that algorithmic stablecoins dont have any associated collateral.
 

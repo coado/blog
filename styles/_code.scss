@@ -134,6 +134,7 @@ code {
     padding: .5rem 1.5rem;
     background-color: var(--base-color-4-light);
     display: inline;
+    vertical-align: middle;
     border-radius: .5rem;
 
     @include responsive("md") {
