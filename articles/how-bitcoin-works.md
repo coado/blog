@@ -56,6 +56,15 @@ The following data is include in the SegWit transactions:
 
 ## Transactions merkle tree
 
-Merkle tree is used to compute the unique hash value of all transactions. Firstly, transactions are converted to the hash, by `SHA-256` algorithm one by one. Secondly, the tree is constructed at the top of those transactions. 
+Merkle tree is used to compute the unique hash value of all transactions. Firstly, transactions are converted to the hash, by `SHA-256` algorithm one by one. Secondly, the tree is constructed on the top of those transactions. 
 
 <Image src='/images/how-bitcoin-works/image2.png' alt='The merkle tree structure' width="900" height="500" />
+
+<Emphasize type='important'>
+  The root hash represents all of the transactions in the block. Therefore, if someone changed one of the transactions, it would cause changing all the hashes along the way! Moreover, the block hash would change too. And when the block hash changes, the consecutive block hash changes too, and so on. So, the whole blockchain from that particular moment is invalid! The most important takeaway is that we cannot change transaction data while it is already attached to the blockchain!
+</Emphasize>
+
+How would we verify if the transaction was attached to the block? Let's assume that we have got `hash4`.
+To check if the hash is in the block, we need to get `log2n` transactions (n = number of all transactions), which is called a `Merkle path` or the `transaction proof`. We can simply query the netwrok for this informations. So, we are starting at our `hash4` and traversing upward calculating each hash on the current branch. Finally we will get the root hash, and if the calculated root hash is equal to the root hash in the block, our transaction is embeded in the tree!
+
+<Image src='/images/how-bitcoin-works/image3.png' alt='Transaction verification' width="1000" height="400" />
