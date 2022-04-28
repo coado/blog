@@ -74,3 +74,5 @@ The bitcoin network obtain a special kind of nodes called `Simplified Paymant Ve
 ## What are transaction inputs and outputs?
 
 Let's assume that Mark wants to send 1 BTC to Carl. Mark recently received 0.5 BTC and 0.7 BTC in different transactions. He is signing his transaction with those inputs: 0.5 BTC and 0.7 BTC. Because of that, he is eligible to get 0.2 BTC as a rest. In this particular case, he will sign a message with multiple inputs. Of course, if he had received more than 1 BTC in one transaction earlier, he would have included only one input in the transaction message. Besides inputs, there are also at most two outputs: one returning the change and one for the actual payment. There is no need to check the whole transaction history to sign a message.
+
+<Image src='/images/how-bitcoin-works/image4.png' alt='Inputs and outputs in bitcoin transactions' width="900" height="600" />
