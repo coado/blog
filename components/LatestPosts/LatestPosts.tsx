@@ -1,11 +1,13 @@
 import styles from './LatestPosts.module.scss';
 import type { Articles } from '../../types/types';
 import { Card } from '../Card/Card';
+import { ArticlesLink } from '../ArticlesLink/ArticlesLink';
 
 export const LatestPosts = ({newestPosts}: {newestPosts: Articles}) => {
     
     return (
         <section className={styles.latestPosts}>
+            <ArticlesLink />
             <span className={styles.line}></span>
             <h2 className={styles.header}>Latest Posts</h2>
             <div className={styles.wrapper}>

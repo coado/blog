@@ -5,7 +5,7 @@ categories: 'Algorithms'
 ---
 
 
-<Topics topics={[
+<TableOfContents topics={[
     'What are algorithmic stablecoins?',
     'Rebasing stablecoins',
     'Seigniorage stablecoins',

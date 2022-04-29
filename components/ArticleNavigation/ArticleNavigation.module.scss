@@ -15,15 +15,4 @@
     color: var(--base-color-2);
 }
 
-.return {
-    text-decoration: none;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    color: var(--base-color-2);
-    transition: all .2s;
-
-    &:hover {
-        opacity: .7;
-    }
-
-}
 

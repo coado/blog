@@ -21,7 +21,7 @@ import { Heading } from '../../components/Mdx/components/Heading/Heading';
 import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
 import { Pre } from '../../components/Mdx/components/Pre/Pre';
 import { Image } from '../../components/Mdx/components/Image/Image';
-import { Topics } from '../../components/Mdx/components/Topics/Topics'
+import { TableOfContents } from '../../components/Mdx/components/Topics/TableOfContents'
 
 // TODO - ADD SEO
 
@@ -51,7 +51,7 @@ const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticP
                 Emphasize,
                 Image,
                 pre: Pre,
-                Topics
+                TableOfContents
             }
         ),[]
     )

@@ -1,12 +1,13 @@
 ---
 title: 'How the block looks like in the bitcoin network?'
 date: '04-19-2022'
-categories: 'Bitcoin algorithms'
+categories: 'Bitcoin Algorithms'
 ---
 
-<Topics topics={[
+<TableOfContents topics={[
     'How the new block is created?',
     'What data each block contains?',
+    ['Header'],
     'Transactions merkle tree',
     'What are transaction inputs and outputs?'
 ]} />
