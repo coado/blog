@@ -2,6 +2,8 @@
 title: 'How algorithmic stablecoins can provide stability and volatility simultaneously ?'
 date: '04-14-2022'
 categories: 'Algorithms'
+isPublished: false
+seoExcerpt: 'Which stablecoin is more secure than others? Learn about algorithmic stablecoins, how they work, what is the danger and how to earn passive income by holding them.'
 ---
 
 

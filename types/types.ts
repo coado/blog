@@ -3,6 +3,8 @@ export type Frontmatter = {
     title: string;
     date: string;
     categories: string;
+    isPublished: boolean;
+    seoExcerpt: string;
 }
 
 export type Article = {

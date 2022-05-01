@@ -27,6 +27,8 @@ import { TableOfContents } from '../../components/Mdx/components/Topics/TableOfC
 
 const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     
+    const { title, slug, date, seoExcerpt } = frontmatter
+
     const mdxComponents = useMemo(
         () => (
             {   
@@ -63,13 +65,14 @@ const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticP
             />
 
             <ArticleJsonLd 
-                url={''}
-                title={frontmatter.title}
-                images={[]}
-                description={frontmatter.slug}
-                datePublished={frontmatter.date}
                 authorName='Veo'
-
+                type='Blog'
+                url={''}
+                title={title}
+                description={seoExcerpt}
+                datePublished={date}
+                dateModified={date}
+                images={[]}
                 // TODO ////////////////////////////////////
             
             />

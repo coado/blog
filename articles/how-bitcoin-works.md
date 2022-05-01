@@ -2,6 +2,8 @@
 title: 'How the block looks like in the bitcoin network?'
 date: '04-19-2022'
 categories: 'Bitcoin Algorithms'
+isPublished: false
+seoExcerpt: 'Learn about basics of bitcoin, how the data is stored in the block, transactions merkle tree and many more!'
 ---
 
 <TableOfContents topics={[
