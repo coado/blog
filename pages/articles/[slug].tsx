@@ -14,7 +14,7 @@ import { useMemo } from 'react';
 import { getThreeLatestPostsWithoutOne } from '../../lib/mdx';
 import type { Frontmatter } from '../../types/types';
 import { LatestPosts } from '../../components/LatestPosts/LatestPosts';
-
+import { SEO } from '../../next-seo.config';
 
 // MDX COMPONENTS
 import { Heading } from '../../components/Mdx/components/Heading/Heading';
@@ -61,7 +61,7 @@ const Article = ({ frontmatter, source, readTime, newestPosts }: InferGetStaticP
     return (
         <>  
             <NextSeo 
-                // TODO ////////////////////////////////////
+                {...SEO}
             />
 
             <ArticleJsonLd 

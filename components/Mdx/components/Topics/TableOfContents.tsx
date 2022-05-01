@@ -7,7 +7,7 @@ export const TableOfContents = ({ topics }: { topics: string[] | string[][] }) =
             <h1 className={styles.header}> Table of contents: </h1>
             <ul>
                 {
-                    topics.map((topic: string | string[], i: number) => {
+                    topics?.map((topic: string | string[], i: number) => {
                         if (typeof topic === 'string') return <li key={i}> { topic } </li>
                         else {
                             return <ul> 

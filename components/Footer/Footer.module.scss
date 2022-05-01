@@ -1,9 +1,42 @@
 
 .footer {
     width: 100%;
-    position: absolute;
+    position: relative;
+
 }
 
-.svg {
-   
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 3rem;
+}
+
+.iconsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    padding-right: 4.5%;
+
+}
+
+.icon {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 2rem;
+    color: var(--base-color-1);
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        color: var(--grey-light);
+    }
+}
+
+.text {
+    margin-left: 10%;
+    font-size: 1.5rem;
 }
