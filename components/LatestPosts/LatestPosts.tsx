@@ -3,7 +3,7 @@ import type { Articles } from '../../types/types';
 import { Card } from '../Card/Card';
 import { ArticlesLink } from '../ArticlesLink/ArticlesLink';
 
-export const LatestPosts = ({newestPosts}: {newestPosts: Articles}) => {
+export const LatestPosts = ({ newestPosts }: {newestPosts: Articles}) => {
     
     return (
         <section className={styles.latestPosts}>
@@ -20,6 +20,7 @@ export const LatestPosts = ({newestPosts}: {newestPosts: Articles}) => {
                         slug={post.slug}
                         categories={post.categories.split(' ')}
                         readTime={post.readTime}
+                        difficulty={post.difficulty}
                     />))
                 }
             </div>

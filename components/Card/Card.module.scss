@@ -128,6 +128,29 @@
     width: 80%;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.difficultyWrapper {
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.basic {
+    background-color: var(--base-color-2-transparent);
+    
+}
+
+.intermediate {
+    background-color: var(--intermediate-color);
+}
+
+.advanced {
+    background-color: var(--advanced-color);
+}
+
+.difficulty {
+    letter-spacing: .08rem;
 }
 
 .titleContainer {

@@ -80,6 +80,7 @@ code {
     scrollbar-width: thin;
     scrollbar-color: var(--base-color-2) transparent;
     letter-spacing: .1rem;
+    white-space: nowrap;
 
     &::-webkit-scrollbar {   
         height: 4px;

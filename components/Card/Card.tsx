@@ -2,12 +2,13 @@ import styles from './Card.module.scss';
 import Link from 'next/link';
 import { SvgIcon } from '../SvgIcon/SvgIcon';
 
-export const Card = ({ title, date, slug, categories, readTime}: {
+export const Card = ({ title, date, slug, categories, readTime, difficulty}: {
     title: string,
     date: string,
     slug: string,
     readTime: number,
-    categories: string[]
+    categories: string[],
+    difficulty: 'basic' | 'advanced' | 'intermediate'
 }) => {
     return (
         <Link href={`/articles/${slug}`} passHref>
@@ -21,6 +22,9 @@ export const Card = ({ title, date, slug, categories, readTime}: {
                 <div className={styles.wrapper}>
                     <div className={styles.postData}>
                         <p> {Math.ceil(readTime)} minutes </p>
+                        <div className={`${styles[difficulty]} ${styles.difficultyWrapper}`} >
+                            <p className={styles.difficulty}>{ difficulty }</p>
+                        </div>
                         <p> { date } </p>
                     </div>
                     <div className={styles.titleContainer}>

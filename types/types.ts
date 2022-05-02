@@ -5,14 +5,12 @@ export type Frontmatter = {
     categories: string;
     isPublished: boolean;
     seoExcerpt: string;
+    difficulty: 'basic' | 'intermediate' | 'advanced'
 }
 
-export type Article = {
-    slug: string,
-    readTime: number,
-    title: string;
-    date: string;
-    categories: string;  
+export type Article = Frontmatter & {
+    slug: string;
+    readTime: number;
 }
 
 export type Articles = Article[]

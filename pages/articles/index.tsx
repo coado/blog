@@ -56,6 +56,7 @@ const Articles = ({ articles }: { articles: Articles}) => {
                         categories = {article.categories?.split(' ')}
                         slug={article.slug}
                         readTime={article.readTime}
+                        difficulty={article.difficulty}
                       /> 
                     ))
               } 
