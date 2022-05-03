@@ -19,7 +19,10 @@ The `private key` is basically a randomly, unsigned `256 bit or 32 bytes` intege
 
 ### elliptic curve
 
-First and foremost, to understand how the public key is generated from the private key, we need to cover elliptic curve concept. Eliptic curves are in form of `y^2 = x^3+ax+b`. Bitcoin network use special `Secp256k1` type of eliptic curve to generate public keys, which is in form of `y^2 = x^3 + 7`. 
+First and foremost, to understand how the public key is generated from the private key, we need to cover elliptic curve concept. Eliptic curves are in form of `y^2 = x^3+ax+b`. Bitcoin network use special `Secp256k1` type of eliptic curve to generate public keys, which is in form of `y^2 = x^3 + 7`. Let me talk you through the elliptic curve multiplication. 
 
 
+<Image src='/images/ecdsa/image1.png' alt='Eliptic curve multiplication phase1' width="650" height="600" />
+
+<Image src='/images/ecdsa/image2.png' alt='Eliptic curve multiplication phase2' width="650" height="600" />
 
