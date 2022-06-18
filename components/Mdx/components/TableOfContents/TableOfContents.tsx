@@ -10,7 +10,7 @@ export const TableOfContents = ({ topics }: { topics: string[] | string[][] }) =
                     topics?.map((topic: string | string[], i: number) => {
                         if (typeof topic === 'string') return <li key={i}> { topic } </li>
                         else {
-                            return <ul> 
+                            return <ul key={i}> 
                                 {
                                     topic.map((el, i) => <li key={i}>{ el }</li>)
                                 }

@@ -21,7 +21,7 @@ import { Heading } from '../../components/Mdx/components/Heading/Heading';
 import { Emphasize } from '../../components/Mdx/components/Emphasize/Emphasize';
 import { Pre } from '../../components/Mdx/components/Pre/Pre';
 import { Image } from '../../components/Mdx/components/Image/Image';
-import { TableOfContents } from '../../components/Mdx/components/Topics/TableOfContents'
+import { TableOfContents } from '../../components/Mdx/components/TableOfContents/TableOfContents'
 
 // TODO - ADD SEO
 
